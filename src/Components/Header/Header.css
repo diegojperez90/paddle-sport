@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: orange;
+  min-height: 100px;
+}
+
+.logoPrincipal {
+  width: 100px;
+  height: 100%;
+}
