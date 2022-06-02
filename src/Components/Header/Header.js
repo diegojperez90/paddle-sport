@@ -1,11 +1,14 @@
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
+import CartWidget from "../CartWidget/CartWidget";
+import logoPrincipal from "../../assets/pruebaPadle.png"
 
 export default function Header() {
   return (
     <header className="header">
-      <img className="logoPrincipal" src="../../assets/logoPrincipal.webp"/>
+      <img className="logoPrincipal" src= { logoPrincipal }/>
       <NavBar/>
+      <CartWidget/>
     </header>
   );
 }
