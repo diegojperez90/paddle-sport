@@ -10,7 +10,7 @@ export default function NavBar() {
     <nav className="nav">
       <ul className="nav-list">
         <NavLink handleOnClick = {handleClick} title="Paletas"/>
-        <NavLink handleOnClick = {handleClick} title="Zapatillas"/>
+        <NavLink handleOnClick = {handleClick} title="Calzado"/>
         <NavLink handleOnClick = {handleClick} title="Accesorios"/>
         <NavLink handleOnClick = {handleClick} title="Contacto"/>
       </ul>
