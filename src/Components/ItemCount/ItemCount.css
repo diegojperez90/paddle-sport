@@ -1,0 +1,8 @@
+.contenedorContador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 3px solid tomato;
+  height: 50px;
+}

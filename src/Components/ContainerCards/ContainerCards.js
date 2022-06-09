@@ -1,4 +1,5 @@
-import "./ContainerCards.css"
+import "./ContainerCards.css";
+import ItemCount from "../ItemCount/ItemCount";
 
 export default function ContainerCards({ greeting, subtitulo }) {
 
@@ -10,6 +11,7 @@ export default function ContainerCards({ greeting, subtitulo }) {
       <p>
         {subtitulo}
       </p>
+      <ItemCount stock={5} initial={1}/>
     </div>
   )
 }
