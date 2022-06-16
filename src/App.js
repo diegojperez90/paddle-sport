@@ -1,13 +1,12 @@
 import Header from "./Components/Header/Header";
-import ContainerCards from "./Components/ContainerCards/ContainerCards";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
 function App() {
-
 
   return (
     <div className="App">
       <Header/>
-      <ContainerCards 
+      <ItemListContainer 
         greeting = 'Bienvenidos a Paddle Sport' 
         subtitulo = 'Nuestra tienda online de productos de Paddle'
       />
