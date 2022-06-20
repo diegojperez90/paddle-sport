@@ -11,7 +11,6 @@ export const productos = [
       title: "Whip",
       price: 20000,
       stock: 4,
-      
       imagen: WHIP,
       category: "Royal",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
@@ -32,7 +31,7 @@ export const productos = [
     stock: 4,
     imagen: AVANT,
     category: "Varlion",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+    description: "Paleta de potencia, medidas 55 x 78, color negro con gris. Hecha a base de fibre de carbon."
 },
 {
     id: 4,
