@@ -3,14 +3,20 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useState, useEffect } from "react";
 import { productos } from "../../Products";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom"
+
 
 export default function ItemListContainer({ greeting, subtitulo }) {
   const [products, setProducts] = useState([]);
+  const { marca } = useParams();
 
   useEffect(()=>{
     const getProducts = new Promise((resolve, reject) => {
+      const nuevoArray =   productos.filter(elem => elem.category === marca);
       setTimeout(() => {
-        resolve(productos)
+        resolve(
+          productos
+        )
       }, 2000);
     });
     getProducts

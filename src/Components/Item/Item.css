@@ -1,4 +1,17 @@
 .cajaItem {
   background-color: rgba(219, 215, 215, 0.966);
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.botonDetalle {
+  font-size: 18px;
+  margin: 10px;
+  border: 2px solid tomato;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background: rgb(240, 188, 179);
+  padding: 7px;
 }

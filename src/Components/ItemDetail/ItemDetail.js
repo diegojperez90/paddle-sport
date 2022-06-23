@@ -1,6 +1,7 @@
 
 
 export default function ItemDetail({ item }) {
+  console.log('ITEMMM', item)
   return (
     <div>
       <h1> {item.title} </h1>
