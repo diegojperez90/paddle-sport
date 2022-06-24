@@ -6,10 +6,6 @@ import { useParams } from 'react-router-dom'
 
 export default function ItemDetailContainer({ greeting }) {
   const [product, setProduct] = useState({});
-
-  console.log('useParams', useParams())
-
-
   const { id } =  useParams();
   
   useEffect(()=>{
@@ -27,7 +23,7 @@ export default function ItemDetailContainer({ greeting }) {
     .catch((error)=>{
       console.log(error)
     })
-  }, []);
+  }, [id]);
 
   return (
     <div className="detalleProducto">

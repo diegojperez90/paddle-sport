@@ -1,5 +1,3 @@
-
-
 export default function ItemDetail({ item }) {
   console.log('ITEMMM', item)
   return (

@@ -3,7 +3,6 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
-
 function App() {
 
   return (
@@ -21,7 +20,7 @@ function App() {
             <ItemDetailContainer greeting='DETALLE DEL PRODUCTO'/>
           }/>
           <Route path="/category/:marca" element={
-            <ItemListContainer greeting='CATEGORIAS'/>
+            <ItemListContainer greeting= "Categoria"/>
           }/>
         </Routes>
       </BrowserRouter>
