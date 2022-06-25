@@ -9,13 +9,14 @@ import { useParams } from "react-router-dom"
 export default function ItemListContainer({ greeting, subtitulo }) {
   const [products, setProducts] = useState([]);
   const { marca } = useParams();
-  const nuevoArray =   productos.filter(elem => elem.category === marca);
-
+  
   useEffect(()=>{
     const getProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(
-          productos
+          marca 
+            ? productos.filter(elem => elem.category === marca) 
+            : productos 
         )
       }, 2000);
     });
@@ -26,7 +27,7 @@ export default function ItemListContainer({ greeting, subtitulo }) {
     .catch((error)=>{
       console.log(error)
     })
-  }, []);
+  }, [marca]);
 
   return (
     <div className="saludoInicial">
@@ -37,7 +38,7 @@ export default function ItemListContainer({ greeting, subtitulo }) {
         {subtitulo}
       </p>
       <ItemCount stock={5} initial={1}/>
-      <ItemList items={marca ? nuevoArray : products} />
+      <ItemList items={products} />
     </div>
   )
 }

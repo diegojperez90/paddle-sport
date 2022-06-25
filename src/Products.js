@@ -4,6 +4,12 @@ import AVANT from './assets/imagenes/AVANT.jpg';
 import BOURNE from './assets/imagenes/BOURNE.jpg';
 import AIRVERTUO from './assets/imagenes/AIRVERTUO.jpg';
 import TECHNICAL from './assets/imagenes/TECHNICAL.jpg';
+import POLE from './assets/imagenes/POLE.jpg';
+import VERON from './assets/imagenes/VERON.png';
+import PRISMA from './assets/imagenes/PRISMA.webp';
+import AVANTDIFUSOR from './assets/imagenes/AVANTDIFUSOR.webp';
+import VERTUO from './assets/imagenes/VERTUO.jpeg';
+import VPER from './assets/imagenes/VPER.jpeg'
 
 export const productos = [
   {
@@ -59,5 +65,59 @@ export const productos = [
   imagen: TECHNICAL,
   category: "Babolat",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
-}
+},
+{
+  id: 7,
+  title: "Pole",
+  price: 30000,
+  stock: 3,
+  imagen: POLE,
+  category: "Royal",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dequaerat."
+},
+{
+  id: 8,
+  title: "Veron",
+  price: 78000,
+  stock: 2,
+  imagen: VERON,
+  category: "Babolat",
+  description: "La pala de Pádel Counter Veron ha sido desarrollada con el fin de aportar la tolerancia necesaria para aguantar los golpes de los adversarios y proporcionar una potencia dinámica para acabar el punto."
+},
+{
+  id: 9,
+  title: "Prisma",
+  price: 56000,
+  stock: 5,
+  imagen: PRISMA,
+  category: "Varlion",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+},
+{
+  id: 10,
+  title: "Difusor",
+  price: 56000,
+  stock: 5,
+  imagen: AVANTDIFUSOR,
+  category: "Varlion",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+},
+{
+  id: 11,
+  title: "Technical Vertuo",
+  price: 56000,
+  stock: 5,
+  imagen: VERTUO,
+  category: "Babolat",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+},
+{
+  id: 12,
+  title: "Vper",
+  price: 56000,
+  stock: 5,
+  imagen: VPER,
+  category: "Babolat",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+},
 ]
