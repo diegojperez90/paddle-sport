@@ -1,5 +1,5 @@
 import "./ItemListContainer.css"
-import ItemCount from "../ItemCount/ItemCount";
+
 import { useState, useEffect } from "react";
 import { productos } from "../../Products";
 import ItemList from "../ItemList/ItemList";
@@ -37,7 +37,7 @@ export default function ItemListContainer({ greeting, subtitulo }) {
       <p>
         {subtitulo}
       </p>
-      <ItemCount stock={5} initial={1}/>
+      
       <ItemList items={products} />
     </div>
   )

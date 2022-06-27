@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  border: 3px solid tomato;
+  background-color: rgb(247, 112, 112);
   height: 50px;
+  max-width: 400px; 
 }
