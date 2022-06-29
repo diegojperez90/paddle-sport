@@ -19,12 +19,16 @@ export default function ItemCount({ stock, initial, onAdd}) {
     } 
   }
 
+  function addToCart(){
+    onAdd(cantidad)
+  }
+
   return (
     <div className='contenedorContador'>
       <button onClick={resta}>-</button>
       <span> {cantidad} </span>
       <button onClick={suma}>+</button>
-      <button onClick={onAdd}>AGREGAR AL CARRITO</button>
+      <button onClick={addToCart}>AGREGAR AL CARRITO</button>
     </div>
   )
 }
