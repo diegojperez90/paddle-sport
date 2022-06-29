@@ -19,7 +19,7 @@ export const productos = [
       stock: 4,
       imagen: WHIP,
       category: "Royal",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+      description: "Paleta de control."
   },
   {
       id: 2,
