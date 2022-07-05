@@ -1,7 +1,9 @@
 .saludoInicial {
   border: 5px solid green;
   margin: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 20px;
   padding: 10px;
 }

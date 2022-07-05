@@ -1,13 +1,15 @@
 import "./ItemListContainer.css"
-
 import { useState, useEffect } from "react";
 import { productos } from "../../Products";
 import ItemList from "../ItemList/ItemList";
+import { FadeLoader } from "react-spinners";
 import { useParams } from "react-router-dom"
 
 
 export default function ItemListContainer({ greeting, subtitulo }) {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true)
+
   const { marca } = useParams();
   
   useEffect(()=>{
@@ -23,6 +25,7 @@ export default function ItemListContainer({ greeting, subtitulo }) {
     getProducts
     .then((res)=>{
       setProducts(res);
+      setLoading(false)
     })
     .catch((error)=>{
       console.log(error)
@@ -37,8 +40,11 @@ export default function ItemListContainer({ greeting, subtitulo }) {
       <p>
         {subtitulo}
       </p>
+      {loading 
+        ? <FadeLoader/>
+        : <ItemList items={products} />
+      }
       
-      <ItemList items={products} />
     </div>
   )
 }
