@@ -9,8 +9,7 @@ import CartContext from "../../context/CartContext";
 export default function ItemDetail({ item }) {
   const [isAddedToCart, setAddedToCart] = useState(false);
 
-  const { addItem, cart, isInCart } = useContext(CartContext);
-  console.log('poniendo al carro', cart);
+  const { addItem, removerItem, isInCartContext } = useContext(CartContext);
 
   function handleOnAdd(cantidad) {
     addItem( item, cantidad );
@@ -29,7 +28,10 @@ export default function ItemDetail({ item }) {
       ? <Link to="/cart" className="botonInCart">Ir al carrito</Link>
       : <ItemCount onAdd={handleOnAdd} stock={5} initial={1}/>
       }
-      <button className="botonRemoverCart">Remover del carrito</button>
+
+      {isInCartContext(item.id) && (
+        <button onClick={ ()=> removerItem(item.id)} className="botonRemoverCart">Remover del carrito</button>
+      )}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import CartContext from '../../context/CartContext'
 import './Cart.css'
 
 export default function Cart() {
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, totalPrecioCart, removerItem } = useContext(CartContext);
   console.log('borrando carrito', cart)
   
   return (
@@ -23,14 +23,18 @@ export default function Cart() {
                 $ {item.price}
               </p>
               <p>Cantidad de unidades: {item.cantidad} </p>
-              <button className='botonEliminarItem'>X</button>
+              <button onClick={ ()=> removerItem(item.id)} className='botonEliminarItem'>X</button>
+              <p>Subtotal: ${item.price * item.cantidad}</p>
             </div>
           </div>
         ))}    
       </div>
       <div className='contenedorBotones'>
-          <button className='botonFinish'>finalizar compra</button>
-          <button className='botonVaciar' onClick={clearCart}>vaciar carrito</button>
+        <div>
+          <p>Total a pagar: ${totalPrecioCart()}</p>
+        </div>
+        <button className='botonFinish'>finalizar compra</button>
+        <button className='botonVaciar' onClick={clearCart}>vaciar carrito</button>
       </div>
   </>
   );

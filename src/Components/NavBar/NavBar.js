@@ -1,22 +1,22 @@
 import "./NavBar.css";
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function NavBar() {
   
   return (
-    <nav className="nav">
+    <nav>
       <ul className="nav-list">
-        <li className="listaNav">
-          <Link to="/">Inicio</Link>
+        <li >
+          <Link className="listaNav" to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/category/Royal">Royal</Link>
+          <NavLink className="listaNav" to="/category/Royal">Royal</NavLink>
         </li>
         <li>
-          <Link to="/category/Varlion">Varlion</Link>
+          <Link className="listaNav" to="/category/Varlion">Varlion</Link>
         </li>
         <li>
-          <Link to="/category/Babolat">Babolat</Link>
+          <Link className="listaNav" to="/category/Babolat">Babolat</Link>
         </li>
       </ul>
     </nav>
