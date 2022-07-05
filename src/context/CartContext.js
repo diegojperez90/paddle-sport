@@ -10,8 +10,14 @@ export function CartContextProvider(props) {
     setCart(productosAgregados)
   }
 
-  function isInCart(id){
+  function isInCartContext(id){
     return cart.some((item)=>item.id === id)
+  }
+
+  function qntyInCart(){
+    let total = 0;
+    cart.forEach( item => total = total + item.cantidad );
+    return total;
   }
 
   function clearCart() {
@@ -19,7 +25,7 @@ export function CartContextProvider(props) {
 };
 
   return (
-    <CartContext.Provider value={ { cart, addItem, isInCart, clearCart } }>
+    <CartContext.Provider value={ { cart, addItem, isInCartContext, qntyInCart ,clearCart } }>
       {props.children}
     </CartContext.Provider>  
   )

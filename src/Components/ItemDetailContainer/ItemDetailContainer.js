@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { productos } from "../../Products";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import  FadeLoader  from "react-spinners/FadeLoader";
 
 export default function ItemDetailContainer({ greeting }) {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
+
   const { id } =  useParams();
   
   useEffect(()=>{
@@ -19,6 +22,7 @@ export default function ItemDetailContainer({ greeting }) {
     getProduct
     .then((res)=>{
       setProduct(res);
+      setLoading(false);
     })
     .catch((error)=>{
       console.log(error)
@@ -30,7 +34,11 @@ export default function ItemDetailContainer({ greeting }) {
       <h2>
       {greeting}
       </h2>
-      <ItemDetail item={ product }/>
+      {loading 
+        ? <FadeLoader/>
+        : <ItemDetail item={ product }/>
+      }
+      
     </div>
   )
 }
