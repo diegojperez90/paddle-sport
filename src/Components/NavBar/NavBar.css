@@ -1,7 +1,3 @@
-.nav {
-  font-size: 24px;
-}
-
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -14,6 +10,8 @@
 }
 
 .listaNav{
-  color: whitesmoke !important;
+  color: whitesmoke;
+  text-decoration:none;
+  font-size: 24px;
 }
 
