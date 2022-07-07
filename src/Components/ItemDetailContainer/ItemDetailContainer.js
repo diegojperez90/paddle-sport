@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { productos } from "../../Products";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
 import { useParams } from 'react-router-dom';
 import  FadeLoader  from "react-spinners/FadeLoader";
+import { traerUnProducto } from "../../services/firestore";
 
 export default function ItemDetailContainer({ greeting }) {
   const [product, setProduct] = useState({});
@@ -12,14 +12,8 @@ export default function ItemDetailContainer({ greeting }) {
   const { id } =  useParams();
   
   useEffect(()=>{
-    const getProduct = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(
-          productos.find(elem => elem.id === parseInt(id)))
-      }, 600);
-    });
 
-    getProduct
+    traerUnProducto(id)
     .then((res)=>{
       setProduct(res);
       setLoading(false);
@@ -38,7 +32,6 @@ export default function ItemDetailContainer({ greeting }) {
         ? <FadeLoader color='blue'/>
         : <ItemDetail item={ product }/>
       }
-      
     </div>
   )
 }
