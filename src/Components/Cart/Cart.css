@@ -3,25 +3,26 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
   margin: 30px;
+  gap: 30px;
 }
 
 .contenedorItem {
   background: grey;
   text-align: center;
-  padding: 0 10px 20px 10px;
-  border-radius: 10px;
+  padding: 0 20px;
+  border-radius: 10px; 
 }
 
 .botonEliminarItem {
   background: red;
-  width: 70px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   color: white;
-  font-size:larger;
+  font-size:large;
+  font-weight: 600;
   border-radius: 10px;
-  border: 0 solid red;
+  border: none;
 }
 
 .contenedorBotones {
@@ -41,8 +42,8 @@
   border-radius: 10px;
   color: white;
   text-transform: uppercase;
-  border: 0 solid blue;
-  font-size: 20px;
+  border: none;
+  font-size: 18px;
 }
 
 .botonVaciar {
@@ -54,6 +55,6 @@
   border-radius: 10px;
   color: white;
   text-transform: uppercase;
-  border: 0 solid blue;
-  font-size: 20px;
+  border: none;
+  font-size: 18px;
 }

@@ -13,16 +13,13 @@ export default function Cart() {
           <div key={item.id} className='contenedorItem'>
             <div  key={item.id}>
               <h2>
-              {item.category}
-              </h2>
-              <h3 >
-                {item.title}
-              </h3>     
-              <img src={item.imagen} alt='imagen del producto' width='120px' height='120px'></img>     
+              {item.category} {item.title}
+              </h2>    
+              <img src={item.imagen} alt='imagen del producto' width='150px' height='150px'></img>     
               <p >
                 $ {item.price}
               </p>
-              <p>Cantidad de unidades: {item.cantidad} </p>
+              <p>Unidades: {item.cantidad} </p>
               <button onClick={ ()=> removerItem(item.id)} className='botonEliminarItem'>X</button>
               <p>Subtotal: ${item.price * item.cantidad}</p>
             </div>

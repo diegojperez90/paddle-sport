@@ -35,7 +35,7 @@ export default function ItemDetailContainer({ greeting }) {
       {greeting}
       </h2>
       {loading 
-        ? <FadeLoader/>
+        ? <FadeLoader color='blue'/>
         : <ItemDetail item={ product }/>
       }
       
