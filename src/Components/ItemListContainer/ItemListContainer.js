@@ -1,9 +1,10 @@
-import "./ItemListContainer.css"
+import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-import { productos } from "../../Products";
 import ItemList from "../ItemList/ItemList";
 import { FadeLoader } from "react-spinners";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import { traerProductos } from "../../services/firestore";
+
 
 
 export default function ItemListContainer({ greeting, subtitulo }) {
@@ -11,18 +12,10 @@ export default function ItemListContainer({ greeting, subtitulo }) {
   const [loading, setLoading] = useState(true)
 
   const { marca } = useParams();
-  
+
   useEffect(()=>{
-    const getProducts = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(
-          marca 
-            ? productos.filter(elem => elem.category === marca) 
-            : productos 
-        )
-      }, 2000);
-    });
-    getProducts
+    
+    traerProductos()
     .then((res)=>{
       setProducts(res);
       setLoading(false)
@@ -41,10 +34,9 @@ export default function ItemListContainer({ greeting, subtitulo }) {
         {subtitulo}
       </p>
       {loading 
-        ? <FadeLoader/>
+        ? <FadeLoader color="blue" className="spinner"/>
         : <ItemList items={products} />
       }
-      
     </div>
   )
 }

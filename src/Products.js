@@ -19,7 +19,7 @@ export const productos = [
       stock: 4,
       imagen: WHIP,
       category: "Royal",
-      description: "Paleta de control."
+      description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
   },
   {
       id: 2,
@@ -28,7 +28,7 @@ export const productos = [
       stock: 10,
       imagen: ANIVERSARIO,
       category: "Royal",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+      description: "Paleta de despegue. Realizada 100% con fibra de carbon. Color negra con detalles rosados."
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ export const productos = [
     stock: 8,
     imagen: BOURNE,
     category: "Varlion",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+    description: "Es una nueva textura rugosa para el plano de la pala. Como nombre lo indica, está pensada especialmente para los golpes de revés o drive con slice o liftados. Peso: 350-375 gramos."
 },
 {
   id: 5,
@@ -55,7 +55,7 @@ export const productos = [
   stock:3,
   imagen: AIRVERTUO,
   category: "Babolat",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+  description: "Fabricada en fibra de vidrio. Paleta de potencia para jugadores que toman riesgo en el ataque."
 },
 {
   id: 6,
@@ -64,7 +64,7 @@ export const productos = [
   stock: 2,
   imagen: TECHNICAL,
   category: "Babolat",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+  description: "Forma de diamante. Perfil del marco: 38 mm. Peso: 365 gramos +/- 10 g. Superficie o Caras: Carbon FLEX. Núcleo: Black EVA. Equilibrio: Cabeza pesada. Nivel: Avanzado – Jugador Atacante Técnico."
 },
 {
   id: 7,
@@ -73,7 +73,7 @@ export const productos = [
   stock: 3,
   imagen: POLE,
   category: "Royal",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dequaerat."
+  description: "Componentes: Fibra de Vidrio con refuerzos de Carbono. Núcleo: Foam. Formato: Circular. Balance: Medio cercano al puño de la paleta."
 },
 {
   id: 8,
@@ -82,7 +82,7 @@ export const productos = [
   stock: 2,
   imagen: VERON,
   category: "Babolat",
-  description: "La pala de Pádel Counter Veron ha sido desarrollada con el fin de aportar la tolerancia necesaria para aguantar los golpes de los adversarios y proporcionar una potencia dinámica para acabar el punto."
+  description: "La pala de Pádel Counter Veron ha sido desarrollada con el fin de aportar la tolerancia necesaria para aguantar los golpes de los adversarios y proporcionar una potencia dinámica para acabar el punto. Una pala de potencia dinámica y precisión decisiva en cada ataque. Una pala diseñada pensando en los jugadores atacantes técnicos, aquellos que utilizan toda su técnica para dirigir el punto con precisión."
 },
 {
   id: 9,
@@ -91,7 +91,7 @@ export const productos = [
   stock: 5,
   imagen: PRISMA,
   category: "Varlion",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+  description: "Es un marco revolucionario con forma de prisma, diseñado e implementado en las dos nuevas palas Maxima Summum Prisma y Bourne Summum Prisma. Es una nueva textura rugosa para el plano de la pala. Como nombre lo indica, está pensada especialmente para los golpes de revés o drive con slice o liftados."
 },
 {
   id: 10,
@@ -100,24 +100,24 @@ export const productos = [
   stock: 5,
   imagen: AVANTDIFUSOR,
   category: "Varlion",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+  description: "Tecnología desarrollada con el objetivo de direccionar el flujo del aire en la única zona “tratable” de la pala por donde atraviesa el aire, su corazón. Las ventajas de esta tecnología son: Mayor velocidad del jugador tanto en golpes rápidos como el smash."
 },
 {
   id: 11,
   title: "Technical Vertuo",
-  price: 56000,
+  price: 60000,
   stock: 5,
   imagen: VERTUO,
   category: "Babolat",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+  description: "Una pala de potencia fácil y manejabilidad extrema. Una pala diseñada pensando en los jugadores atacantes técnicos, aquellos que utilizan toda su técnica para dirigir el punto con precisión."
 },
 {
   id: 12,
   title: "Vper",
-  price: 56000,
+  price: 70000,
   stock: 5,
   imagen: VPER,
   category: "Babolat",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat."
+  description: "Una pala en formato diamante fabricada 100% en carbono cuyo núcleo está compuesta por dos gomas EVA en forma de Sándwich siendo las dos caras externas más duras que la interna para dotarla de una mayor explosividad en los golpeos de potencia. Cuanta con el sistema 3D SPIN+ (superficie rugosa) para dar más efectos a la bola. También cuenta con el HPS, Holes Pattern System por sus iniciales en inglés que optimiza la trasmisión de potencia y precisión en los golpes a través del diferente tamaño de los agujeros."
 },
 ]

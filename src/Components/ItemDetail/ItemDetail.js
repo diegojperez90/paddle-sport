@@ -17,21 +17,22 @@ export default function ItemDetail({ item }) {
   }
   return (
     <div className="contenedorDetalleProducto">
-      <h1> {item.title} </h1>
-      <h2> {item.category} </h2>
-      <p> {item.description}</p>
-      <img  src = {item.imagen} alt={item.title} width="300"/>
-      <br></br>
-      <span>$ {item.price}</span>
-      
-      {isAddedToCart 
-      ? <Link to="/cart" className="botonInCart">Ir al carrito</Link>
-      : <ItemCount onAdd={handleOnAdd} stock={5} initial={1}/>
-      }
-
-      {isInCartContext(item.id) && (
+      <div>
+        <img  src = {item.imagen} alt={item.title} width="350"/>
+      </div>
+      <div className="contenedorTitle">
+        <h1> {item.category} {item.title}</h1>
+        <p> {item.description}</p>
+        <span>$ {item.price}</span> 
+        <br></br>
+        {isAddedToCart 
+          ? <Link to="/cart" className="botonInCart">Ir al carrito</Link>
+          : <ItemCount className='contador' onAdd={handleOnAdd} stock={5} initial={1}/>
+        }
+        {isInCartContext(item.id) && (
         <button onClick={ ()=> removerItem(item.id)} className="botonRemoverCart">Remover del carrito</button>
       )}
+      </div>
     </div>
   )
 }

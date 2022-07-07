@@ -1,9 +1,16 @@
 .contenedorDetalleProducto {
   background-color: rgb(210, 228, 228);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 5px;
+}
+
+.contenedorTitle{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .botonInCart {
@@ -12,20 +19,23 @@
   background-color: rgb(15, 141, 15);
   margin: 16px;
   padding: 10px;
-  width: 50%;
   border-radius: 10px;
   color: white;
   text-transform: uppercase;
+  font-size: 18px;
+  min-width: 220px;
 }
 
 .botonRemoverCart {
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   background-color: rgb(211, 12, 12);
   margin: 16px;
   padding: 10px;
-  width: 50%;
   border-radius: 10px;
   color: white;
   text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  min-width: 220px;
 }

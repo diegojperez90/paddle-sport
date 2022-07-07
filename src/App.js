@@ -7,7 +7,6 @@ import { CartContextProvider } from "./context/CartContext";
 import Cart from "./Components/Cart/Cart";
 
 function App() {
-
   return (
     <div className="App">
       <CartContextProvider>
