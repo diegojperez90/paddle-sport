@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, getDocs, getDoc, doc, collection } from "firebase/firestore"
+import { getFirestore, getDocs, getDoc, doc, collection, query, where } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAm0gYnfVHSYXmoVln4fsMIG9i8zpWcM7c",
@@ -39,6 +39,22 @@ export async function traerUnProducto(id){
   return {
     ...docPaletaSnapshot.data(), id: docPaletaSnapshot.id
   };
+}
+
+export async function traerProductoPorCategoria(marca){
+  const paletasCollection = collection(appFirestore, "paletas");
+
+  const q = query(paletasCollection, where("category", "==", marca));
+
+  const paletasSnapshot = await getDocs(q);
+
+  let respuesta = paletasSnapshot.docs.map( doc => {
+    return {
+      ...doc.data(),
+      id: doc.id
+    }
+  })
+  return respuesta;
 }
 
 export default appFirestore;
