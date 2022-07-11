@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { FadeLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
-import { traerProductos } from "../../services/firestore";
+import { traerProductoPorCategoria, traerProductos } from "../../services/firestore";
 
 
 
@@ -14,15 +14,25 @@ export default function ItemListContainer({ greeting, subtitulo }) {
   const { marca } = useParams();
 
   useEffect(()=>{
-    
-    traerProductos()
-    .then((res)=>{
-      setProducts(res);
-      setLoading(false)
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
+    if (marca) {
+      traerProductoPorCategoria(marca)
+      .then((res) => {
+        setProducts(res);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    } else {
+        traerProductos()
+        .then((res)=>{
+          setProducts(res);
+          setLoading(false)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+    }
   }, [marca]);
 
   return (
