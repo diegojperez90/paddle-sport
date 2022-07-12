@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, getDocs, getDoc, doc, collection, query, where } from "firebase/firestore"
+import { getFirestore, getDocs, getDoc, doc, collection, query, where, setDoc, addDoc } from "firebase/firestore";
+// import WHIP from './assets/imagenes/WHIP';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAm0gYnfVHSYXmoVln4fsMIG9i8zpWcM7c",
@@ -57,5 +58,55 @@ export async function traerProductoPorCategoria(marca){
   return respuesta;
 }
 
+export async function exportDataForFirestore(){
+  const productos = [
+    {
+     
+      title: "Whip",
+      price: 20000,
+      stock: 4,
+      // imagen: WHIP,
+      category: "Royal",
+      description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+  },
+  {
+    
+    title: "Whip",
+    price: 20000,
+    stock: 4,
+    // imagen: WHIP,
+    category: "Royal",
+    description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+},
+{
+ 
+  title: "Whip",
+  price: 20000,
+  stock: 4,
+  // imagen: WHIP,
+  category: "Royal",
+  description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+}
+  ];
+  const paletasCollection = collection(appFirestore, 'nuevasPaletas');
+
+  productos.forEach (item => {
+    const newDoc = doc(paletasCollection);
+    setDoc(newDoc, item).then( res => {
+      console.log('documento guardado:', newDoc.id)
+    }).catch( error => console.log('error', error))
+  })
+}
+
+export async function createBuyOrder(dataOrder){
+  // console.log('venimos ok', dataOrder)
+  const ordersCollection = collection(appFirestore, 'orders');
+
+  const orderCreated = await addDoc(ordersCollection, dataOrder);
+  console.log('added', orderCreated.id);
+  
+}
+
 export default appFirestore;
+
 

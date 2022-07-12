@@ -1,10 +1,29 @@
 import React, { useContext } from 'react'
 import CartContext from '../../context/CartContext'
-import './Cart.css'
+import './Cart.css';
+import { createBuyOrder } from '../../services/firestore';
 
 export default function Cart() {
   const { cart, clearCart, totalPrecioCart, removerItem } = useContext(CartContext);
-  console.log('borrando carrito', cart)
+  
+  
+
+  function handleBuyOrder(){
+    const dataOrder = {
+      buyer: {
+        name: "React 37070",
+        phone: 123456,
+        email: "react37070@ClipLoader.abc"
+      },
+      items:cart,
+      total: totalPrecioCart()
+    }
+    createBuyOrder(dataOrder);
+    clearCart();
+  }
+  
+
+  
   
   return (
     <>
@@ -30,7 +49,7 @@ export default function Cart() {
         <div>
           <p>Total a pagar: ${totalPrecioCart()}</p>
         </div>
-        <button className='botonFinish'>finalizar compra</button>
+        <button onClick={handleBuyOrder} className='botonFinish'>finalizar compra</button>
         <button className='botonVaciar' onClick={clearCart}>vaciar carrito</button>
       </div>
   </>
