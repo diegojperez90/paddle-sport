@@ -1,7 +1,5 @@
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-import { getFirestore, getDocs, getDoc, doc, collection, query, where, setDoc, addDoc } from "firebase/firestore";
-// import WHIP from './assets/imagenes/WHIP';
+import { getFirestore, getDocs, getDoc, doc, collection, query, where, setDoc, addDoc, Timestamp } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAm0gYnfVHSYXmoVln4fsMIG9i8zpWcM7c",
@@ -14,7 +12,6 @@ const firebaseConfig = {
 };
 
 const appFirebase = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 const appFirestore = getFirestore(appFirebase);
 
 export async function traerProductos(){
@@ -58,53 +55,60 @@ export async function traerProductoPorCategoria(marca){
   return respuesta;
 }
 
-export async function exportDataForFirestore(){
-  const productos = [
-    {
+// export async function exportDataForFirestore(){
+//   const productos = [
+//     {
      
-      title: "Whip",
-      price: 20000,
-      stock: 4,
-      // imagen: WHIP,
-      category: "Royal",
-      description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-  },
-  {
+//       title: "Whip",
+//       price: 20000,
+//       stock: 4,
+//       // imagen: WHIP,
+//       category: "Royal",
+//       description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+//   },
+//   {
     
-    title: "Whip",
-    price: 20000,
-    stock: 4,
-    // imagen: WHIP,
-    category: "Royal",
-    description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-},
-{
+//     title: "Whip",
+//     price: 20000,
+//     stock: 4,
+//     // imagen: WHIP,
+//     category: "Royal",
+//     description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+// },
+// {
  
-  title: "Whip",
-  price: 20000,
-  stock: 4,
-  // imagen: WHIP,
-  category: "Royal",
-  description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-}
-  ];
-  const paletasCollection = collection(appFirestore, 'nuevasPaletas');
+//   title: "Whip",
+//   price: 20000,
+//   stock: 4,
+//   // imagen: WHIP,
+//   category: "Royal",
+//   description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
+// }
+//   ];
+//   const paletasCollection = collection(appFirestore, 'nuevasPaletas');
 
-  productos.forEach (item => {
-    const newDoc = doc(paletasCollection);
-    setDoc(newDoc, item).then( res => {
-      console.log('documento guardado:', newDoc.id)
-    }).catch( error => console.log('error', error))
-  })
-}
+//   productos.forEach (item => {
+//     const newDoc = doc(paletasCollection);
+//     setDoc(newDoc, item).then( res => {
+//       console.log('documento guardado:', newDoc.id)
+//     }).catch( error => console.log('error', error))
+//   })
+// }
 
 export async function createBuyOrder(dataOrder){
-  // console.log('venimos ok', dataOrder)
   const ordersCollection = collection(appFirestore, 'orders');
+  const dateTimestamp = Timestamp.now()
 
-  const orderCreated = await addDoc(ordersCollection, dataOrder);
-  console.log('added', orderCreated.id);
-  
+  const dataOrderWithDate = {
+    buyer: dataOrder.buyer,
+    items: dataOrder.items,
+    total: dataOrder.total,
+    date: dateTimestamp
+  }
+  console.log(dataOrderWithDate);
+  const orderCreated = await addDoc(ordersCollection, dataOrderWithDate);
+
+  return orderCreated;
 }
 
 export default appFirestore;
