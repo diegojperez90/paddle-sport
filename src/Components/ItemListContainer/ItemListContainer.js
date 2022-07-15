@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { FadeLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
-import { traerProductoPorCategoria, traerProductos, exportDataForFirestore } from "../../services/firestore";
+import { traerProductoPorCategoria, traerProductos } from "../../services/firestore";
 
 
 

@@ -3,7 +3,12 @@ import React, {createContext, useState} from 'react';
 const CartContext = createContext();
 
 export function CartContextProvider(props) {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([]);
+  const [buyer, setBuyer] = useState({
+    username:'',
+    phone:'',
+    email:'',
+  });
 
   function addItem (item, cantidad) {
     if (isInCartContext(item.id)){
@@ -42,10 +47,17 @@ export function CartContextProvider(props) {
 
   function clearCart() {
     setCart([]);
-};
+  }
+
+  function datosComprador(field, value){
+    setBuyer({
+      ...buyer,
+      [field]: value,
+    })
+  }
 
   return (
-    <CartContext.Provider value={ { cart, addItem, isInCartContext, qntyInCart , totalPrecioCart ,clearCart, removerItem } }>
+    <CartContext.Provider value={ { cart, addItem, isInCartContext, qntyInCart , totalPrecioCart ,clearCart, removerItem, datosComprador, buyer } }>
       {props.children}
     </CartContext.Provider>  
   )
