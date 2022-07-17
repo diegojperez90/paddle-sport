@@ -29,9 +29,9 @@ export default function ItemDetail({ item }) {
           ? <Link to="/cart" className="botonInCart">Ir al carrito</Link>
           : <ItemCount className='contador' onAdd={handleOnAdd} stock={5} initial={1}/>
         }
-        {/* {isInCartContext(item.id) && (
+        {isInCartContext(item.id) && (
         <button onClick={ ()=> removerItem(item.id)} className="botonRemoverCart">Remover del carrito</button>
-      )} */}
+      )}
       </div>
     </div>
   )
