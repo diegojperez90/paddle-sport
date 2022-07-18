@@ -29,7 +29,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
-    
     </div>
   );
 }

@@ -55,46 +55,6 @@ export async function traerProductoPorCategoria(marca){
   return respuesta;
 }
 
-// export async function exportDataForFirestore(){
-//   const productos = [
-//     {
-     
-//       title: "Whip",
-//       price: 20000,
-//       stock: 4,
-//       // imagen: WHIP,
-//       category: "Royal",
-//       description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-//   },
-//   {
-    
-//     title: "Whip",
-//     price: 20000,
-//     stock: 4,
-//     // imagen: WHIP,
-//     category: "Royal",
-//     description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-// },
-// {
- 
-//   title: "Whip",
-//   price: 20000,
-//   stock: 4,
-//   // imagen: WHIP,
-//   category: "Royal",
-//   description: "Paleta de control. Color negra con detalles azul y verde. Material de ficha de carbon."
-// }
-//   ];
-//   const paletasCollection = collection(appFirestore, 'nuevasPaletas');
-
-//   productos.forEach (item => {
-//     const newDoc = doc(paletasCollection);
-//     setDoc(newDoc, item).then( res => {
-//       console.log('documento guardado:', newDoc.id)
-//     }).catch( error => console.log('error', error))
-//   })
-// }
-
 export async function createBuyOrder(dataOrder){
   const ordersCollection = collection(appFirestore, 'orders');
   const dateTimestamp = Timestamp.now()
