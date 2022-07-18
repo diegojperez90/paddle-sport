@@ -30,7 +30,7 @@ export function CartContextProvider(props) {
   }
 
   function isInCartContext(id){
-    return cart.some((item)=>item.id === id)
+    return cart.some((item)=>item.id === id);
   }
 
   function qntyInCart(){

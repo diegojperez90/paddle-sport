@@ -10,8 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Cart() {
   const { cart, clearCart, totalPrecioCart, removerItem, buyer  } = useContext(CartContext);
   
-  
-
   function handleBuyOrder(){
     const dataOrder = {
       buyer: buyer,
@@ -22,8 +20,8 @@ export default function Cart() {
     cart.length > 0 && buyer.username.length > 0 && buyer.phone.length > 0 && buyer.email.length >0 && createBuyOrder(dataOrder).then( (orderCreated) =>{
 
       toast.info( dataOrder.buyer.username + ' acabas de comprar: ' + dataOrder.items.map(tt => {
-        return tt.cantidad + ' ' +  tt.title + ' ' +  tt.category
-      }) + '. Total a pagar: $' + totalPrecioCart() + `. Se enviará un email con la factura a ${dataOrder.buyer.email}` , {
+        return `${tt.cantidad} ${tt.title} ${tt.category} :-) `
+      }) + `Total a pagar: $${totalPrecioCart()}. Se enviará un email con la factura a ${dataOrder.buyer.email}`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -32,11 +30,12 @@ export default function Cart() {
         draggable: true,
         progress: undefined,
         style: {
-          background: 'linear-gradient(to right, #00b09b, #96c92d)',
+          background: 'linear-gradient(to top, #A268BE, #7E429B)',
           minHeight: '100px',
           minWidth: '100px',
           fontSize: '20px',
-          border: 'ligth'
+          border: 'ligth',
+          color: "white"
       }
         });
 
