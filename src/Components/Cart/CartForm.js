@@ -16,14 +16,14 @@ export default function CartForm() {
 
   return (
     <form className='contenedorForm'>
-      <label htmlFor='username'>Usuario</label>
-      <input onChange={handleChange} name='username'/>
+      <label className='label' htmlFor='username'>Usuario</label> 
+      <input className='input' onChange={handleChange} name='username'/>
 
-      <label htmlFor='phone'>Telefono</label>
-      <input onChange={handleChange} name='phone'/>
+      <label className='label' htmlFor='phone'>Telefono</label>
+      <input className='input' onChange={handleChange} name='phone'/>
 
-      <label htmlFor='email'>Email</label>
-      <input onChange={handleChange} name='email'/>
+      <label className='label' htmlFor='email'>Email</label>
+      <input className='input' onChange={handleChange} name='email'/>
     </form>
   )
 }

@@ -1,8 +1,7 @@
 .item {
-  /* border: 5px solid greenyellow; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  margin: 30px 0;
+  gap: 40px;
+  margin: 20px 0;
 }
