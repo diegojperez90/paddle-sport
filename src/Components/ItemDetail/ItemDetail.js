@@ -18,11 +18,11 @@ export default function ItemDetail({ item }) {
   return (
     <div className="contenedorDetalleProducto">
       <div>
-        <img  src = {item.imagen} alt={item.title} width="350"/>
+        <img  src = {item.imagen} alt={item.title} className='imagenPaleta'/>
       </div>
       <div className="contenedorTitle">
-        <h1> {item.category} {item.title}</h1>
-        <p> {item.description}</p>
+        <h1 className="tituloItemDetail"> {item.category} {item.title}</h1>
+        <p className="descripcionItem"> {item.description}</p>
         <span>$ {item.price}</span> 
         <br></br>
         {isAddedToCart 

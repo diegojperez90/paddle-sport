@@ -36,7 +36,7 @@ export default function ItemListContainer({ greeting, subtitulo }) {
   }, [marca]);
 
   return (
-    <div className="saludoInicial">
+    <div className="contenedorTitulo">
       <h2>
       {greeting}
       </h2>

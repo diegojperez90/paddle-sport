@@ -1,6 +1,23 @@
 .contenedorForm {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  font-size: large;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.input , .label{
+  max-width: 300px;
+}
+
+@media only screen and (max-width: 720px){
+  .contenedorForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+    gap: 20px;
+    margin: 20px;
+  }
 }
