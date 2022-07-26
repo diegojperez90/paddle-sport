@@ -3,7 +3,7 @@
 Proyecto realizado en base al curso de REACT JS en el año 2022. Se trata de la creacion de un ecommerce de paletas de paddle donde se podra navegar por distintas categorias, ver el detalle de cada producto para poder añadirlo al carrito y luego eliminarlo si lo desea. En la seccion del carrito de compras podras concretar la compra de los articulos seleccionados y la pagina te devolvera una notificacion con la orden de compra al email aportado.
 
 
-## ![iconoDeploy](deployIcon.png) Deploy
+## Deploy
 
 - Netlify:   https://brilliant-dodol-8862c2.netlify.app/
 
@@ -37,7 +37,6 @@ Proyecto realizado en base al curso de REACT JS en el año 2022. Se trata de la 
 - FIREBASE
 - NETLIFY
 
-### !(muestraInicio.png)
 
 
 
