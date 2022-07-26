@@ -6,7 +6,7 @@ Proyecto realizado en base al curso de REACT JS en el año 2022. Se trata de la 
 
 ## Deploy
 
-- Netlify:   https://brilliant-dodol-8862c2.netlify.app/
+- Netlify:   https://delightful-kitsune-65d97d.netlify.app/
 
 ## Run Locally 
 
